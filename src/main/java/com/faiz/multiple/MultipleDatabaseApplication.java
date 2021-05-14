@@ -23,13 +23,13 @@ public class MultipleDatabaseApplication {
 	@Autowired
 	private UserRepo userRepo;
 
-	@PostConstruct
-	public void addData2Db() {
-		
-		bookRepo.saveAll(Stream.of(new Book(001,"John"),new Book(002 , "Adam")).collect(Collectors.toList()));
-		userRepo.saveAll(Stream.of(new User(001,"Way to Mars"),new User(002 , " Life On Earth ")).collect(Collectors.toList()));
-
-	}
+//	@PostConstruct
+//	public void addData2Db() {
+//		
+//		bookRepo.saveAll(Stream.of(new Book(001,"John"),new Book(002 , "Adam")).collect(Collectors.toList()));
+//		userRepo.saveAll(Stream.of(new User(001,"Way to Mars"),new User(002 , " Life On Earth ")).collect(Collectors.toList()));
+//
+//	}
 	
 	
 

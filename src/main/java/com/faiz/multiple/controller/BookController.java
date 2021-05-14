@@ -4,31 +4,27 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.faiz.multiple.model.book.Book;
-import com.faiz.multiple.model.user.User;
-import com.faiz.multiple.repo.book.BookRepo;
-import com.faiz.multiple.repo.user.UserRepo;
+import com.faiz.multiple.service.BookService;
 
 @RestController
-public class TestController {
+public class BookController {
 
 	@Autowired
-	private BookRepo bookRepo;
-
-	@Autowired
-	private UserRepo userRepo;
-
-	@GetMapping("/getAllUsers")
-	public List<User> getAllUsers() {
-		return (List<User>) userRepo.findAll();
-	}
+	private BookService bookService;
 
 	@GetMapping("/getAllBooks")
 	public List<Book> getAllBooks() {
-		return (List<Book>) bookRepo.findAll();
+		return (List<Book>) bookService.getAllBooks();
 
+	}
+
+	@GetMapping("/saveBooks")
+	public String saveBooks() {
+		return bookService.saveBooks();
 	}
 
 }
