@@ -8,3 +8,8 @@
 	* Build the application
 	CMD > 
 	F:\Windows_Workspace\Spring_Workspace\MultipleDatabaseApp\MutlipleDatabaseApp\build.cmd
+	
+	
+	* Chained Transaction manager for Distributed Transaction Management
+	
+	https://blog.usejournal.com/springboot-jpa-rollback-transaction-with-multi-databases-53e6f2f143d6
