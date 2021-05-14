@@ -32,7 +32,7 @@ public class MergeService {
 		return usersAndBooks;
 	}
 
-	@Transactional(propagation = Propagation.REQUIRED , timeout = 2 , readOnly = false)
+	@Transactional(value = "chainedTransactionManager")
 	public String saveAllBooksAndUsers() {
 		String saveBookStatus = bookService.saveBooks();
 		String saveUserStatus = userService.saveUsers();

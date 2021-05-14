@@ -24,7 +24,7 @@ public class UserService {
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public String saveUsers() {
-		int c = 1 / 0;
+		//int c = 1 / 0;
 		return userRepo.saveAll(Stream.of(new User(001, "Way to Mars"), new User(002, " Life On Earth "))
 				.collect(Collectors.toList())) != null ? "Successfully saved in User Db > User Table. "
 						: "Failure while saving in User Db > User Table. ";
